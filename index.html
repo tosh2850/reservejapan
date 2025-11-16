@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Japan - Restaurant Reservation Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>🍽️</span>
+                <span>Reserve Japan</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#how">How It Works</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-btn" onclick="toggleLanguage()">
+                    <span id="lang-label">🌐 日本語</span>
+                </button>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrh0QbEQEED9tcNQRU-eaOcALiR7wkkPwoKleIHA7ZdzypEA/viewform?usp=header"
+                  class="cta-btn"
+                  target="_blank"
+                  rel="noopener">
+                  Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="lang-content active" data-lang="en">
+            <h1>Restaurant Reservations Made Easy in Japan</h1>
+            <p>We call restaurants in Japanese and secure your table — so you can focus on enjoying your trip</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrh0QbEQEED9tcNQRU-eaOcALiR7wkkPwoKleIHA7ZdzypEA/viewform?usp=header"
+                class="cta-btn"
+                target="_blank"
+                rel="noopener">
+                  Book a Restaurant
+              </a>
+            <div class="features">
+                <div class="feature-tag">
+                    <span class="checkmark">✓</span>
+                    <span>Phone-only restaurants</span>
+                </div>
+                <div class="feature-tag">
+                    <span class="checkmark">✓</span>
+                    <span>Last-minute bookings</span>
+                </div>
+                <div class="feature-tag">
+                    <span class="checkmark">✓</span>
+                    <span>Allergy confirmations</span>
+                </div>
+            </div>
+        </div>
+        <div class="lang-content" data-lang="ja">
+            <h1>日本のレストラン予約を簡単に</h1>
+            <p>電話予約が難しい方のために、私たちが代わりに予約します</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrh0QbEQEED9tcNQRU-eaOcALiR7wkkPwoKleIHA7ZdzypEA/viewform?usp=header"
+              class="cta-btn"
+              target="_blank"
+              rel="noopener">
+                レストランを予約
+            </a>
+            <div class="features">
+                <div class="feature-tag">
+                    <span class="checkmark">✓</span>
+                    <span>電話予約のみの人気店</span>
+                </div>
+                <div class="feature-tag">
+                    <span class="checkmark">✓</span>
+                    <span>直前予約対応</span>
+                </div>
+                <div class="feature-tag">
+                    <span class="checkmark">✓</span>
+                    <span>アレルギー確認</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-white">
+        <div class="lang-content active" data-lang="en">
+            <h2>What We Do</h2>
+            <div class="about-content">
+                <p>We provide phone reservation support for restaurants and experiences in Japan. If you don’t speak Japanese or prefer not to call, we’ll call on your behalf, secure your booking, and send all details in English.</p>
+            </div>
+            <div class="ideal-box">
+                <h3>Ideal for:</h3>
+                <ul>
+                    <li>
+                        <span class="checkmark">✓</span>
+                        <span>Hotels without concierge (Airbnb, guesthouse, business hotels)</span>
+                    </li>
+                    <li>
+                        <span class="checkmark">✓</span>
+                        <span>Restaurants that only accept phone reservations</span>
+                    </li>
+                    <li>
+                        <span class="checkmark">✓</span>
+                        <span>When you need to confirm allergies, vegetarian options, or English menus</span>
+                    </li>
+                </ul>
+            </div>
+            <p class="note">Note: We only handle restaurant and café reservations. We do not arrange hotels, tours, or transportation.</p>
+        </div>
+        <div class="lang-content" data-lang="ja">
+            <h2>サービス概要</h2>
+            <div class="about-content">
+                <p>レストランやアクテビティ施設への電話予約代行サービスです。電話予約が難しいお客様に代わって、レストランの空席確認から予約確定、予約内容共有までを一括してお引き受けします。（日本語または英語対応）</p>
+            </div>
+            <div class="ideal-box">
+                <h3>特に適したケース:</h3>
+                <ul>
+                    <li>
+                        <span class="checkmark">✓</span>
+                        <span>ホテルコンシェルジュがないご滞在（Airbnb・ゲストハウス・ビジネスホテル等）</span>
+                    </li>
+                    <li>
+                        <span class="checkmark">✓</span>
+                        <span>電話予約のみ受け付ける人気店・ローカル店</span>
+                    </li>
+                    <li>
+                        <span class="checkmark">✓</span>
+                        <span>英語メニューの有無やアレルギー対応など、細かい確認が必要な場合</span>
+                    </li>
+                </ul>
+            </div>
+            <p class="note">※本サービスは「レストラン・カフェの飲食店やアクティビティ施設予約」のみを対象としており、交通機関・宿泊・ツアーなどの旅行商品手配は行っておりません。</p>
+        </div>
+    </section>
+
+    <section id="plans" class="bg-gray">
+        <div class="lang-content active" data-lang="en">
+            <h2>Choose Your Plan</h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-icon blue">📞</div>
+                        <div>
+                            <h3>Specific Restaurant</h3>
+                            <p class="subtitle">You know where you want to go</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>You provide restaurant name/website</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>We call and make reservation</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>Receive confirmation in English</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>Perfect for must-visit destinations</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="plan-card featured">
+                    <div class="plan-header">
+                        <div class="plan-icon red">🔍</div>
+                        <div>
+                            <h3>Restaurant Search + Reservation</h3>
+                            <p class="subtitle">Let us find the perfect spot</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>Share your preferences (area, cuisine, budget)</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>We research and propose 3-5 options</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>You choose your favorite</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>We make the reservation for you</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="lang-content" data-lang="ja">
+            <h2>プランを選ぶ</h2>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <div class="plan-icon blue">📞</div>
+                        <div>
+                            <h3>指定店予約プラン</h3>
+                            <p class="subtitle">予約したい店が決まっている場合</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>お客様が店名・URLを指定</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>当方が日本語で電話予約</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>日本語または英語で予約内容をご案内</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>行きたい店が明確な方向け</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="plan-card featured">
+                    <div class="plan-header">
+                        <div class="plan-icon red">🔍</div>
+                        <div>
+                            <h3>おまかせ調査＋予約プラン</h3>
+                            <p class="subtitle">店選びからお任せしたい場合</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>ご希望をお伺い（エリア、料理、予算）</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>条件に合う3〜5件をご提案</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>お客様が第1〜第3希望を選択</span>
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            <span>選定店の予約を代行</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="bg-white">
+        <div class="lang-content active" data-lang="en">
+            <h2>Simple, Transparent Pricing</h2>
+            <p class="pricing-subtitle">Pay initial fee upfront. Success fee only when we secure your table.</p>
+            
+            <div class="timing-grid">
+                <div class="timing-card">
+                    <div>⏰</div>
+                    <h4>Standard</h4>
+                    <p>7+ days ahead</p>
+                    <p class="extra">No extra charge</p>
+                </div>
+                <div class="timing-card">
+                    <div>⏰</div>
+                    <h4>Urgent</h4>
+                    <p>3-6 days ahead</p>
+                    <p class="extra">+¥1,000/$6.5</p>
+                </div>
+                <div class="timing-card">
+                    <div>⏰</div>
+                    <h4>Last-Minute</h4>
+                    <p>Within 2 days</p>
+                    <p class="extra">+¥2,000/$13.0</p>
+                </div>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card blue">
+                    <h3>Specific Restaurant Plan</h3>
+                    <div class="price-row">
+                        <span>Initial fee per request</span>
+                        <span class="price-amount blue">¥1,000/$6.5</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Success fee (up to 4 guests)</span>
+                        <span class="price-amount blue">¥2,000/$13.0</span>
+                    </div>
+                    <div class="extras">
+                        <p>Extra charges (success only):</p>
+                        <ul>
+                            <li>• Large group (5+ guests): +¥1,000/$6.5</li>
+                            <li>• Urgent booking: +¥1,000/$6.5</li>
+                            <li>• Last-minute booking: +¥2,000/$13.0</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card red">
+                    <h3>Search + Reservation Plan</h3>
+                    <div class="price-row">
+                        <span>Initial fee (includes research)</span>
+                        <span class="price-amount red">¥3,000/$19.5</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Success fee (up to 4 guests)</span>
+                        <span class="price-amount red">¥3,000/$19.5</span>
+                    </div>
+                    <div class="extras">
+                        <p>Extra charges (success only):</p>
+                        <ul>
+                            <li>• Large group (5+ guests): +¥1,500/$9.5</li>
+                            <li>• Urgent booking: +¥1,000/$6.5</li>
+                            <li>• Last-minute booking: +¥2,000/$13.0</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lang-content" data-lang="ja">
+            <h2>シンプルで明確な料金体系</h2>
+            <p class="pricing-subtitle">着手金を事前にお支払い。予約成立時のみ成功報酬が発生します。</p>
+            
+            <div class="timing-grid">
+                <div class="timing-card">
+                    <div>⏰</div>
+                    <h4>通常</h4>
+                    <p>7日以上前</p>
+                    <p class="extra">追加料金なし</p>
+                </div>
+                <div class="timing-card">
+                    <div>⏰</div>
+                    <h4>特急</h4>
+                    <p>3〜6日後</p>
+                    <p class="extra">+¥1,000</p>
+                </div>
+                <div class="timing-card">
+                    <div>⏰</div>
+                    <h4>超特急</h4>
+                    <p>2日以内</p>
+                    <p class="extra">+¥2,000</p>
+                </div>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card blue">
+                    <h3>指定店予約プラン</h3>
+                    <div class="price-row">
+                        <span>1依頼あたりの着手金</span>
+                        <span class="price-amount blue">¥1,000</span>
+                    </div>
+                    <div class="price-row">
+                        <span>成功報酬（4名まで）</span>
+                        <span class="price-amount blue">¥2,000</span>
+                    </div>
+                    <div class="extras">
+                        <p>追加料金（成功時のみ）:</p>
+                        <ul>
+                            <li>• 大人数加算（5名以上）: +¥1,000</li>
+                            <li>• 特急加算: +¥1,000</li>
+                            <li>• 超特急加算: +¥2,000</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-card red">
+                    <h3>おまかせ調査＋予約プラン</h3>
+                    <div class="price-row">
+                        <span>着手金（調査・提案含む）</span>
+                        <span class="price-amount red">¥3,000</span>
+                    </div>
+                    <div class="price-row">
+                        <span>成功報酬（4名まで）</span>
+                        <span class="price-amount red">¥3,000</span>
+                    </div>
+                    <div class="extras">
+                        <p>追加料金（成功時のみ）:</p>
+                        <ul>
+                            <li>• 大人数加算（5名以上）: +¥1,500</li>
+                            <li>• 特急加算: +¥1,000</li>
+                            <li>• 超特急加算: +¥2,000</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how" class="bg-gray">
+        <div class="lang-content active" data-lang="en">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Send Your Request</h3>
+                        <p>Choose a plan and tell us your preferences via our web form or chat</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Review & Pay Initial Fee</h3>
+                        <p>We review your request and you pay the retainer via online payment</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>We Make the Calls</h3>
+                        <p>We contact restaurants in Japanese and negotiate your reservation</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Confirmation & Success Fee</h3>
+                        <p>When successful, you pay the success fee and receive all details in English</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Enjoy Your Meal</h3>
+                        <p>Optional reminder sent the day before with map link</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lang-content" data-lang="ja">
+            <h2>ご利用の流れ</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>お申し込み</h3>
+                        <p>Webフォームまたはチャットで、プラン種別・希望日時・人数等をご入力</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>内容確認と着手金のお支払い</h3>
+                        <p>ご入力内容を確認の上、オンライン決済で着手金をお支払い</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>調査・電話予約</h3>
+                        <p>当方が日本語で店舗に電話し、空席確認・予約交渉を実施</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>予約確定・成功報酬のお支払い</h3>
+                        <p>予約成立後、成功報酬をお支払いいただき、英語で予約内容をご案内</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>お食事をお楽しみください</h3>
+                        <p>ご希望の場合、前日にリマインドと地図リンクをお送りします</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="bg-white">
+        <div class="lang-content active" data-lang="en">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>When do I pay?</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        You first pay the initial fee (retainer). If we successfully secure a reservation, you then pay the success fee and any extra charges. If we cannot make a reservation, you don't pay the success fee or extras.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Is the initial fee refundable?</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        The initial fee covers our research and phone calls, so it is non-refundable in principle. If we clearly make a mistake, we may consider a refund on a case-by-case basis.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>What if no restaurant can accept my booking?</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        In that case, you only pay the initial fee. No success fee or extra charges will be billed.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I cancel after the booking is made?</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        You must follow the restaurant cancellation policy, and cancellation fees may apply. Our success fee is charged for the reservation service itself and is non-refundable in case of guest-side cancellation.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do you handle food allergies?</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes, we can confirm allergies, vegetarian options, halal, and other dietary restrictions with the restaurant. Please specify your requirements in the booking form.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do you arrange hotels, tours, or transportation?</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        No. We specialize only in restaurant and café reservations.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lang-content" data-lang="ja">
+            <h2>よくあるご質問</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>支払いのタイミングはいつですか？</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        ご依頼時に、まず「着手金」をオンライン決済にてお支払いいただきます。実際に予約が成立した場合のみ、後から「成功報酬＋各種加算」をお支払いいただきます。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>着手金は返金されますか？</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        着手金は、調査・電話連絡等の実費に相当するため、原則として返金いたしません。ただし、当方の明らかな手続きミスが原因の場合には、個別に返金対応を検討いたします。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>予約が取れなかった場合はどうなりますか？</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        その場合、着手金のみ頂戴し、成功報酬は発生しません。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>キャンセルしたい場合はどうなりますか？</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        店舗側のキャンセルポリシーに従ってキャンセル料が発生する場合があります。当サービスへの成功報酬は、原則として返金いたしません。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>食物アレルギーや宗教上の制限にも対応してもらえますか？</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        はい、可能な範囲で店舗に確認いたします。ナッツアレルギー、グルテンフリー、豚肉NG、ハラール配慮などご希望がある場合は、フォームに必ずご記入ください。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>ツアーやホテル、交通機関の手配も依頼できますか？</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        いいえ。本サービスは、飲食店の予約代行のみに特化しています。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+        <div class="lang-content active" data-lang="en">
+            <h2>Ready to Reserve Your Table?</h2>
+            <p>Let us handle the phone calls while you enjoy planning your trip</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrh0QbEQEED9tcNQRU-eaOcALiR7wkkPwoKleIHA7ZdzypEA/viewform?usp=header"
+              class="cta-btn"
+              target="_blank"
+              rel="noopener">
+                Get Started Now
+            </a>
+        </div>
+        <div class="lang-content" data-lang="ja">
+            <h2>テーブルを予約しませんか？</h2>
+            <p>電話は私たちにお任せください。旅行の計画に集中できます</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrh0QbEQEED9tcNQRU-eaOcALiR7wkkPwoKleIHA7ZdzypEA/viewform?usp=header"
+              class="cta-btn"
+              target="_blank"
+              rel="noopener">
+                今すぐ始める
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">
+            <span>🍽️</span>
+            <span>Reserve Japan</span>
+        </div>
+        <p>Restaurant Reservation Service for Visitors to Japan</p>
+        <div class="info">
+            <span>Operating hours: 10:00-22:00 JST</span>
+            <span> • </span>
+            <span>English & 日本語</span>
+        </div>
+    </footer>
+
+    <script>
+        var currentLang = 'en';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ja' : 'en';
+            
+            var langContents = document.querySelectorAll('.lang-content');
+            for (var i = 0; i < langContents.length; i++) {
+                if (langContents[i].getAttribute('data-lang') === currentLang) {
+                    langContents[i].classList.add('active');
+                } else {
+                    langContents[i].classList.remove('active');
+                }
+            }
+
+            var langLabel = document.getElementById('lang-label');
+            langLabel.textContent = currentLang === 'en' ? '🌐 日本語' : '🌐 English';
+        }
+
+        function toggleFaq(button) {
+            var faqItem = button.parentElement;
+            var isActive = faqItem.classList.contains('active');
+            
+            var allFaqItems = document.querySelectorAll('.faq-item');
+            for (var i = 0; i < allFaqItems.length; i++) {
+                allFaqItems[i].classList.remove('active');
+            }
+            
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // 修正済み: href="#" を除外
+        var anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+        for (var i = 0; i < anchorLinks.length; i++) {
+            anchorLinks[i].addEventListener('click', function(e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('href');
+                var target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
