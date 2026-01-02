@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | BookingAssist Japan</title>
+  <meta name="description" content="Practical guides for booking restaurants in Japan, written for international travelers." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- LPと同じCSSを流用 -->
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- （任意）ブログ用の軽微な見た目調整：style.cssを触りたくないならこのままでもOK -->
+  <style>
+    /* blog list spacing only (safe) */
+    .blog-wrap { max-width: 900px; margin: 0 auto; }
+    .blog-meta { color: #64748b; font-size: 0.9rem; margin-top: 0.25rem; }
+    .blog-card-title { font-size: 1.25rem; margin-bottom: 0.5rem; color: #1e293b; }
+    .blog-card-excerpt { color: #334155; }
+    .blog-card-link { text-decoration: none; color: inherit; display: block; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="/index.html" class="logo">
+        <span>🍽️</span><span>BookingAssist Japan</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/index.html#about">About</a></li>
+        <li><a href="/index.html#plans">Plans</a></li>
+        <li><a href="/index.html#pricing">Pricing</a></li>
+        <li><a href="/index.html#how">How It Works</a></li>
+        <li><a href="/index.html#faq">FAQ</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- ブログ一覧は英語運用でOK。ボタンは見た目合わせのため残し、ラベルのみ切替 -->
+        <button class="lang-btn" onclick="toggleLanguageLabelOnly()">
+          <span id="lang-label">🌐 日本語</span>
+        </button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfrh0QbEQEED9tcNQRU-eaOcALiR7wkkPwoKleIHA7ZdzypEA/viewform?usp=header"
+           class="cta-btn" target="_blank" rel="noopener">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding-top: 96px;">
+    <div class="lang-content active" data-lang="en">
+      <h1>Blog</h1>
+      <p>Guides and practical tips for booking restaurants and experiences in Japan.</p>
+      <div class="features">
+        <div class="feature-tag"><span class="checkmark">✓</span><span>Reservations</span></div>
+        <div class="feature-tag"><span class="checkmark">✓</span><span>Phone calls</span></div>
+        <div class="feature-tag"><span class="checkmark">✓</span><span>Travel planning</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="lang-content active" data-lang="en">
+      <h2 style="text-align:left; max-width: 900px; margin-left:auto; margin-right:auto;">Latest Articles</h2>
+
+      <div class="blog-wrap">
+        <!-- ✅ 記事カード：増えたらこのブロックを複製して追加 -->
+        <div class="plan-card" style="margin-bottom: 1.5rem;">
+          <a class="blog-card-link" href="/blog/why-booking-restaurants-in-japan-is-difficult.html">
+            <div class="blog-card-title">
+              Why Booking Restaurants in Japan is So Difficult: 5 Common Hurdles and How to Overcome Them
+            </div>
+            <div class="blog-meta">Category: Reservations • Reading time: ~6–8 min</div>
+            <p class="blog-card-excerpt" style="margin-top: 0.75rem;">
+              Phone-only culture, language barriers, Katakana name requirements, no-shows, and the “first of the month” battle—plus practical solutions.
+            </p>
+          </a>
+        </div>
+
+        
+        <div class="plan-card" style="margin-bottom: 1.5rem;">
+          <a class="blog-card-link" href="time-travel-to-1873-mishima-tei-kyoto-sukiyaki.html">
+            <div class="blog-card-title">
+              Time Travel to 1873: Why Mishima-tei is Kyoto's Most Authentic Sukiyaki Experience
+            </div>
+            <div class="blog-meta">Category: Reservations • Reading time: ~6–8 min</div>
+            <p class="blog-card-excerpt" style="margin-top: 0.75rem;">A guide to the atmosphere, the Kansai-style sukiyaki ritual, and how to secure a private tatami room reservation.</p>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo">
+      <span>🍽️</span><span>BookingAssist Japan</span>
+    </div>
+    <p>Restaurant Reservation Service for Visitors to Japan</p>
+    <div class="info">
+      <span>Operating hours: 10:00-22:00 JST</span>
+      <span> • </span>
+      <span>English & 日本語</span>
+    </div>
+  </footer>
+
+  <script>
+    var labelLang = 'en';
+    function toggleLanguageLabelOnly() {
+      labelLang = labelLang === 'en' ? 'ja' : 'en';
+      var langLabel = document.getElementById('lang-label');
+      langLabel.textContent = labelLang === 'en' ? '🌐 日本語' : '🌐 English';
+    }
+  </script>
+</body>
+</html>
