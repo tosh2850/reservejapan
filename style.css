@@ -539,3 +539,18 @@ footer .info {
         grid-template-columns: 1fr;
     }
 }
+
+.article-photo { margin: 1.25rem 0; }
+.article-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+  display: block;
+}
+.article-photo figcaption {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
