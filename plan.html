@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Choose a Plan | BookingAssist Japan</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* plan.html 用の最小スタイル（必要なら style.css に移してOK） */
+    .page-wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 56px; }
+    .top-row { display:flex; align-items:center; justify-content:space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+    .back-link { text-decoration: none; opacity: .85; }
+    .back-link:hover { opacity: 1; }
+
+    .title { margin: 12px 0 8px; }
+    .lead { margin: 0 0 18px; opacity: .9; }
+
+    .grid { display:grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 840px){ .grid { grid-template-columns: 1fr 1fr; } }
+
+    .card { background:#fff; border: 1px solid #e9e9e9; border-radius: 14px; padding: 18px; }
+    .badge { display:inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; opacity:.95; margin-bottom: 10px; }
+    .badge.blue { background: rgba(0,120,255,.10); }
+    .badge.red  { background: rgba(255,0,80,.10); }
+
+    .card h2 { margin: 6px 0 6px; font-size: 20px; }
+    .card p  { margin: 0 0 14px; opacity: .9; }
+    .card ul { margin: 0 0 16px; padding-left: 18px; }
+    .card li { margin: 6px 0; }
+
+    .btn-row { display:flex; gap: 10px; flex-wrap: wrap; align-items:center; }
+    .sub-link { font-size: 14px; opacity: .85; }
+    .sub-link:hover { opacity: 1; }
+
+    /* 既存の .cta-btn が style.css にある前提。なければ最低限これを残してください */
+    /* .cta-btn { display:inline-block; padding: 12px 18px; border-radius: 10px; background:#111; color:#fff; text-decoration:none; } */
+  </style>
+</head>
+
+<body>
+  <div class="page-wrap">
+
+    <div class="top-row">
+      <a class="back-link" href="index.html">← Back to Home</a>
+      <button class="lang-btn" type="button" id="langBtn">
+        <span id="lang-label">🌐 日本語</span>
+      </button>
+    </div>
+
+    <div class="lang-content active" data-lang="en">
+      <h1 class="title">Choose Your Plan</h1>
+      <p class="lead">Select the plan below. You will be taken to the appropriate request form.</p>
+    </div>
+
+    <div class="lang-content" data-lang="ja">
+      <h1 class="title">プランを選択</h1>
+      <p class="lead">以下からプランを選択してください。該当する申込フォームに移動します。</p>
+    </div>
+
+    <div class="grid">
+      <!-- Specific -->
+      <div class="card card-blue">
+        <span class="badge blue">📞 Specific</span>
+
+        <div class="lang-content active" data-lang="en">
+          <h2>Specific Restaurant Plan</h2>
+          <p>You already know the restaurant. We call and secure your reservation.</p>
+          <ul>
+            <li>Restaurant name / website is provided by you</li>
+            <li>We call in Japanese and book on your behalf</li>
+            <li>You receive confirmation in English</li>
+          </ul>
+          <div class="btn-row">
+            <a class="cta-btn" id="btnSpecific" href="#">Continue</a>
+            <a class="sub-link" id="linkSpecific" href="#" target="_blank" rel="noopener">Open form in a new tab</a>
+          </div>
+        </div>
+
+        <div class="lang-content" data-lang="ja">
+          <h2>指定店予約プラン</h2>
+          <p>予約したい店舗が決まっている方向け。こちらで日本語で電話して予約します。</p>
+          <ul>
+            <li>店名・URL等をご提示</li>
+            <li>当方が日本語で電話予約</li>
+            <li>予約内容は英語で共有</li>
+          </ul>
+          <div class="btn-row">
+            <a class="cta-btn" id="btnSpecificJa" href="#">進む</a>
+            <a class="sub-link" id="linkSpecificJa" href="#" target="_blank" rel="noopener">新しいタブで開く</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="card card-red">
+        <span class="badge red">🔍 Search</span>
+
+        <div class="lang-content active" data-lang="en">
+          <h2>Search + Reservation Plan</h2>
+          <p>We research options and then book your favorite.<br><span style="opacity:0;">.</span></p>
+          <ul>
+            <li>Share your preferences (area / cuisine / budget)</li>
+            <li>We propose 3–5 options</li>
+            <li>We book the option you choose</li>
+          </ul>
+          <div class="btn-row">
+            <a class="cta-btn" id="btnSearch" href="#">Continue</a>
+            <a class="sub-link" id="linkSearch" href="#" target="_blank" rel="noopener">Open form in a new tab</a>
+          </div>
+        </div>
+
+        <div class="lang-content" data-lang="ja">
+          <h2>おまかせ調査＋予約プラン</h2>
+          <p>条件に合う候補を提案し、その後ご希望の店舗を予約します。</p>
+          <ul>
+            <li>エリア・料理・予算などの希望を入力</li>
+            <li>3〜5件をご提案</li>
+            <li>選んだ候補を予約代行</li>
+          </ul>
+          <div class="btn-row">
+            <a class="cta-btn" id="btnSearchJa" href="#">進む</a>
+            <a class="sub-link" id="linkSearchJa" href="#" target="_blank" rel="noopener">新しいタブで開く</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // ▼▼▼ ここをあなたのフォームURL（2つ）に差し替え ▼▼▼
+    const SPECIFIC_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe84Yqmsf2lwmBfl6-z2A2M3zgMECI-ImLGwXd5kN3dDInSXw/viewform?usp=publish-editor";
+    const SEARCH_FORM_URL   = "https://docs.google.com/forms/d/e/1FAIpQLSetOkfSI6sJyoLokko8u4Tt1jJPNIZ_0qGNhGRa1c2UPFR28Q/viewform?usp=publish-editor";
+
+    // フォームリンクをボタンに反映（同一タブ遷移を推奨）
+    function bindLinks() {
+      const set = (id, url) => { const el = document.getElementById(id); if (el) el.href = url; };
+
+      set("btnSpecific", SPECIFIC_FORM_URL);
+      set("btnSpecificJa", SPECIFIC_FORM_URL);
+      set("linkSpecific", SPECIFIC_FORM_URL);
+      set("linkSpecificJa", SPECIFIC_FORM_URL);
+
+      set("btnSearch", SEARCH_FORM_URL);
+      set("btnSearchJa", SEARCH_FORM_URL);
+      set("linkSearch", SEARCH_FORM_URL);
+      set("linkSearchJa", SEARCH_FORM_URL);
+    }
+
+    // 言語切替（index.html と同じロジック＋localStorageで保持）
+    let currentLang = localStorage.getItem("lang") || "en";
+
+    function applyLang() {
+      const blocks = document.querySelectorAll(".lang-content");
+      blocks.forEach(b => b.classList.toggle("active", b.getAttribute("data-lang") === currentLang));
+      document.getElementById("lang-label").textContent = currentLang === "en" ? "🌐 日本語" : "🌐 English";
+      localStorage.setItem("lang", currentLang);
+    }
+
+    document.getElementById("langBtn").addEventListener("click", () => {
+      currentLang = currentLang === "en" ? "ja" : "en";
+      applyLang();
+    });
+
+    bindLinks();
+    applyLang();
+  </script>
+</body>
+</html>

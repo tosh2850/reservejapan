@@ -554,3 +554,17 @@ footer .info {
   margin-top: 0.5rem;
 }
 
+/* --- Plan cards color (match original page vibe) --- */
+.card.card-blue{
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+  border: 1px solid #bfdbfe;
+}
+
+.card.card-red{
+  background: linear-gradient(135deg, #fef2f2, #ffffff);
+  border: 2px solid #fecaca;
+}
+
+/* バッジもカード色に寄せる（任意） */
+.badge.blue { background: #dbeafe; }
+.badge.red  { background: #fee2e2; }
